@@ -1,6 +1,7 @@
 import colors from "colors";
 import {inquirerMenu, leerInput, pausa} from "./helpers/inquirer.js";
 import Tareas from "./models/tareas.js";
+import guardarArchivo from "./helpers/guardarArchivo.js";
 
 
 const main = async () => {
@@ -16,12 +17,10 @@ const main = async () => {
                 tareas.crearTarea(desc);
                 break;
             case '2':
-                console.log(tareas._listado);
+                console.log(tareas.listadoArr);
                 break;
         }
-
-
-        console.log({opt});
+        guardarArchivo(tareas.listadoArr);
 
         await pausa();
     } while (opt !== '0');
