@@ -14,7 +14,8 @@
   "dependencies": {
     "colors": "^1.4.0",
     "dotenv": "^9.0.2",
-    "inquirer": "^9.1.4"
+    "inquirer": "^9.1.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "jest": "^28.1.1",
