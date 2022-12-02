@@ -1,13 +1,18 @@
 import colors from "colors";
 import {inquirerMenu, leerInput, pausa} from "./helpers/inquirer.js";
 import Tareas from "./models/tareas.js";
-import guardarArchivo from "./helpers/guardarArchivo.js";
+import {guardarArchivo, leerArchivo} from "./helpers/guardarArchivo.js";
 
 
 const main = async () => {
 
     let opt = '';
     const tareas = new Tareas();
+    const tareasDB = leerArchivo();
+
+    if (tareasDB) {
+        tareas.cargarTareasFromArray(tareasDB);
+    }
 
     do {
         opt = await inquirerMenu();
@@ -20,9 +25,11 @@ const main = async () => {
                 console.log(tareas.listadoArr);
                 break;
         }
+
         guardarArchivo(tareas.listadoArr);
 
         await pausa();
+
     } while (opt !== '0');
 
 };
