@@ -1,4 +1,4 @@
-import {inquirerMenu, leerInput, listadoTareasBorrar, pausa} from "./helpers/inquirer.js";
+import {confirmar, inquirerMenu, leerInput, listadoTareasBorrar, pausa} from "./helpers/inquirer.js";
 import {guardarArchivo, leerArchivo} from "./helpers/guardarArchivo.js";
 import Tareas from "./models/tareas.js";
 
@@ -31,7 +31,13 @@ const main = async () => {
                 break;
             case'6':
                 const id = await listadoTareasBorrar(tareas.listadoArr);
-                console.log({id});
+                if (id !== '0') {
+                    const ok = await confirmar('¿Estás seguro?');
+                    if (ok) {
+                        tareas.borrarTarea(id);
+                        console.log('Tarea borrada');
+                    }
+                }
                 break;
         }
 
