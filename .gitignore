@@ -43,9 +43,9 @@ jspm_packages/
 
 
 # vscode
-.vscode
+.vscode/
 #
-.idea
+.idea/
 
 # TypeScript v1 declaration files
 typings/
