@@ -37,3 +37,24 @@ const preguntas = [
         ]
     }
 ];
+const inquirerMenu = async () => {
+    console.clear();
+    console.log( '========================'.green );
+    console.log( 'Seleccione una opción'.brightRed );
+    console.log( '========================'.green );
+
+    const { option } = await inquirer.prompt( preguntas );
+    return option;
+};
+async function pausa () {
+    const question = [
+        {
+            type: 'input',
+            name: 'enter',
+            message: `Presione ${ 'ENTER'.green } para continuar`
+        }
+    ];
+    console.log( 'Pausa' );
+    await inquirer.prompt( question );
+};
+ 
