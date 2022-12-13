@@ -86,3 +86,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+.idea/workspace.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
