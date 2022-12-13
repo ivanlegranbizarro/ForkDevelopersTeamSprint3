@@ -120,4 +120,6 @@ export {
     inquirerMenu,
     pausa,
     leerInput,
+    listadoTareasBorrar,
+    confirmar
 };
