@@ -2,7 +2,7 @@ import * as fs from "fs";
 
 
 /* Declaring a constant variable called archivo and assigning it the value of the path to the data.json file. */
-const archivo = 'data.json';
+const archivo = './persistencia/JSON/data.json';
 
 /**
  * It takes a data parameter, and then writes that data to the file specified by the archivo variable
