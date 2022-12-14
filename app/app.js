@@ -1,6 +1,6 @@
-import {guardarArchivo, leerArchivo} from "./persistencia/JSON/guardarArchivo";
+import {guardarArchivo, leerArchivo} from "./persistencia/JSON/guardarArchivo.js";
 
-const colors = require( 'colors' );
+import 'colors'
 import {
     confirmar,
     inquirerMenu,
