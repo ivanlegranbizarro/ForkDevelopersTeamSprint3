@@ -1,11 +1,11 @@
-import {leerArchivo} from "./persistencia/JSON/guardarArchivo";
+import {guardarArchivo, leerArchivo} from "./persistencia/JSON/guardarArchivo";
 
 const colors = require( 'colors' );
 import {
     confirmar,
     inquirerMenu,
     leerInput,
-    listadoTareasBorrar,
+    listadoTareasBorrar, mostrarListadoChecklist,
     pausa
 } from "./controllers/inquirer.js";
 import Tareas from "./models/Tareas.js";
