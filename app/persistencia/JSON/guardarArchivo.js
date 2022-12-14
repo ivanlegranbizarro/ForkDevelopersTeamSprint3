@@ -18,7 +18,7 @@ const leerArchivo = () => {
         return null;
     }
     const info = fs.readFileSync(archivo, {encoding: 'utf-8'});
-    return JSON.parse(info);// TODO return data en lugar de info
+    return JSON.parse(info);
 };
 
 
