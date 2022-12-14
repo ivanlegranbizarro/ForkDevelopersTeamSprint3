@@ -37,11 +37,18 @@ class Tareas {
         } );
     }
 
+/**
+ * The function crearTarea() creates a new Tarea object and adds it to the _listado object.
+ * @param desc - The description of the task.
+ */
     crearTarea ( desc ) {
         const tarea = new Tarea( desc );
         this._listado[ tarea.id ] = tarea;
     }
 
+/**
+ * It takes the list of tasks, and for each task, it prints out the task's index, description, and status.
+ */
     listadoCompleto () {
         console.log();
         this.listadoArr.forEach( ( tarea, i ) => {
@@ -54,6 +61,11 @@ class Tareas {
         } );
     }
 
+/**
+ * It's a function that takes a boolean as an argument and returns a list of tasks that are either completed or pending.
+ *
+ * @param [completadas=true] - true
+ */
     listarPendientesCompletadas ( completadas = true ) {
         console.log();
         let contador = 0;
@@ -76,6 +88,12 @@ class Tareas {
         } );
     }
 
+/**
+ * It takes an array of ids, and for each id in the array, it sets the `completadoEn` property of the corresponding task to
+ * the current date.
+ *
+ * @param [ids] - an array of ids of the tasks to be completed
+ */
     toggleCompletadas ( ids = [] ) {
         ids.forEach( id => {
             const tarea = this._listado[ id ];
