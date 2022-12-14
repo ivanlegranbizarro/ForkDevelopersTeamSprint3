@@ -113,7 +113,7 @@ const confirmar = async message => {
     const { ok } = await inquirer.prompt( pregunta );
     return ok;
 };
-
+const mostrarListadoChecklist = async ( tareas = [] ) => {} //TODO: Implementar
 
 
 export {
@@ -121,5 +121,6 @@ export {
     pausa,
     leerInput,
     listadoTareasBorrar,
+    mostrarListadoChecklist,
     confirmar
 };

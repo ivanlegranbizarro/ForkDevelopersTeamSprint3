@@ -37,13 +37,15 @@ class Tareas {
         this._listado[tarea.id] = tarea;
     }
 
-    listadoCompleto() {
+    listadoCompleto() { //TODO: Listar todas las tareas
         
     }
 
-    listarPendientesCompletadas() {
+    listarPendientesCompletadas() { //TODO: Listar tareas completadas o pendientes
         
     }
+
+    toggleCompletadas() {} //TODO: Completar o descompletar tareas
 }
 
 export default Tareas;
