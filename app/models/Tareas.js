@@ -108,16 +108,6 @@ class Tareas {
         } );
     }
 
-/**
- * The updateTask() function updates Descripticon a list object
- * @param desc - The description of the task.
- */
-
-    actualizarTarea ( id = '', desc ) {
-        if ( this._listado[ id ] ) {
-            this._listado[ tarea.desc ] = desc;
-        }
-    }
 }
 
 export default Tareas;
