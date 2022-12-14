@@ -37,6 +37,13 @@ class Tareas {
         this._listado[tarea.id] = tarea;
     }
 
+    listadoCompleto() {
+        
+    }
+
+    listarPendientesCompletadas() {
+        
+    }
 }
 
 export default Tareas;
