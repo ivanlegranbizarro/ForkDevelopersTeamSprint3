@@ -1,4 +1,4 @@
-const inquirer = require("inquirer");
+const inquirer = require( "inquirer" );
 
 const preguntas = [
     {
@@ -113,7 +113,26 @@ const confirmar = async message => {
     const { ok } = await inquirer.prompt( pregunta );
     return ok;
 };
-
+const mostrarListadoChecklist = async ( tareas = [] ) => {
+    const choices = tareas.map( ( tarea, i ) => {
+        const idx = `${ i + 1 }.`.green;
+        return {
+            value: tarea.id,
+            name: `${ idx } ${ tarea.desc }`,
+            checked: !!tarea.completadoEn
+        };
+    } );
+    const pregunta = [
+        {
+            type: 'checkbox',
+            name: 'ids',
+            message: 'Selecciones',
+            choices
+        }
+    ];
+    const { ids } = await inquirer.prompt( pregunta );
+    return ids;
+};
 
 
 export {
@@ -121,5 +140,6 @@ export {
     pausa,
     leerInput,
     listadoTareasBorrar,
+    mostrarListadoChecklist,
     confirmar
 };
