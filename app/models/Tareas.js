@@ -108,6 +108,18 @@ class Tareas {
         } );
     }
 
+    actualizarTarea ( id , desc) {
+        //TODAVÍA NO FUNCIONA, NO HACE EL UPDATE
+        this.listadoArr.forEach(tarea => {
+                if (tarea.id == id){
+                    console.log(desc);
+                };
+            });
+            console.table(this.listadoArr);
+            console.log( 'Tarea modificada'.yellow );
+        };
+
+
 }
 
 export default Tareas;
