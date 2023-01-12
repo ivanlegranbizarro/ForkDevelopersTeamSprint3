@@ -109,16 +109,14 @@ class Tareas {
     }
 
     actualizarTarea ( id , desc) {
-        //TODAVÍA NO FUNCIONA, NO HACE EL UPDATE
-        this.listadoArr.forEach(tarea => {
+
+        this.listadoArr.forEach( tarea => {
                 if (tarea.id == id){
-                    console.log(desc);
-                };
+                    this._listado[ tarea.id ].desc = desc;
+                }             
             });
-            console.table(this.listadoArr);
             console.log( 'Tarea modificada'.yellow );
         };
-
 
 }
 

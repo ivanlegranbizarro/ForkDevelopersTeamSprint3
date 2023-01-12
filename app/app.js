@@ -56,6 +56,7 @@ const main = async () => {
                         const desc = await leerInput( 'Introduce la nueva Descripción: ');
                         tareas.actualizarTarea( id2 , desc );           
                 }   
+                break;
         }
 
         guardarArchivo( tareas.listadoArr );
