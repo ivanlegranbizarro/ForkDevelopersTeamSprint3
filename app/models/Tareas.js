@@ -107,6 +107,17 @@ class Tareas {
             }
         } );
     }
+
+    actualizarTarea ( id , desc) {
+
+        this.listadoArr.forEach( tarea => {
+                if (tarea.id == id){
+                    this._listado[ tarea.id ].desc = desc;
+                }             
+            });
+            console.log( 'Tarea modificada'.yellow );
+        };
+
 }
 
 export default Tareas;

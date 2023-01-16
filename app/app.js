@@ -5,7 +5,7 @@ import {
     confirmar,
     inquirerMenu,
     leerInput,
-    listadoTareasBorrar, mostrarListadoChecklist,
+    listadoTareasBorrar, mostrarListadoChecklist, listadoTareasActualizar,
     pausa
 } from "./controllers/inquirer.js";
 import Tareas from "./models/Tareas.js";
@@ -49,6 +49,13 @@ const main = async () => {
                         console.log( 'Tarea borrada' );
                     }
                 }
+                break;
+            case '7':
+                const id2 = await listadoTareasActualizar( tareas.listadoArr );
+                if ( id2 !== '0' ) {         
+                        const desc = await leerInput( 'Introduce la nueva Descripción: ');
+                        tareas.actualizarTarea( id2 , desc );           
+                }   
                 break;
         }
 

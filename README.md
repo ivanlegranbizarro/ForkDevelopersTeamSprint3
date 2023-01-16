@@ -15,3 +15,5 @@ Seguidament, el que caldrà fer per poder executar l'aplicació és navegar fins
 `node app.js`
 
 Un cop executat aquest comandament, l'aplicació ens mostrarà una interfície de consola amb la qual podrem interactuar usant les tecles de fletxa i la barra espaiadora per seleccionar o des-seleccionar les tasques.
+
+rama tomas
